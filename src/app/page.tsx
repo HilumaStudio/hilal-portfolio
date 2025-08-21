@@ -117,7 +117,7 @@ export default function Home() {
 
       <footer className="border-t border-zinc-200 bg-zinc-900 text-zinc-100 dark:border-zinc-800">
         <div className="mx-auto max-w-6xl px-4 py-10 text-center">
-          <p className="text-sm">© 2025 Hilal Abdullah — Portfolio</p>
+          <p className="text-sm">© 2025 Hilal Abdullah - Portfolio</p>
           <p className="text-xs text-zinc-400">Great design feels simple and right.</p>
         </div>
       </footer>

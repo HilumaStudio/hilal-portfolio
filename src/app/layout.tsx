@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,8 +10,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Hilal Abdullah",
-  description: "Great design feels simple and right",
+  metadataBase: new URL('https://hilalabdullah.my.id'),
+  title: 'Hilal Abdullah — Portfolio',
+  description: 'Portfolio web & logo design by Hilal Abdullah.',
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true }, // penting
+  openGraph: {
+    title: 'Hilal Abdullah — Portfolio',
+    url: 'https://hilalabdullah.my.id',
+    type: 'website',
+  },
+  icons: { icon: '/favicon.png' }, // pastikan file ada
 };
 
 export default function RootLayout({
@@ -35,6 +34,7 @@ export default function RootLayout({
         className= {`${inter.variable} antialiased`}
       >
         {children}
+        <SpeedInsights/>
       </body>
     </html>
   );
